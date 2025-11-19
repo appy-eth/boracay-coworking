@@ -1,0 +1,70 @@
+import { Wifi, Coffee, Waves, MapPin } from 'lucide-react';
+
+export default function Hero() {
+  return (
+    <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <div
+        className="absolute inset-0 z-0"
+        style={{
+          backgroundImage: 'url(/hammock-on-beach-boracay.webp)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+      </div>
+
+      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
+        <div className="flex items-center justify-center gap-2 mb-6">
+          <MapPin className="w-6 h-6 text-cyan-400" />
+          <span className="text-cyan-400 font-medium tracking-wide">Boracay Island, Philippines</span>
+        </div>
+
+        <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          Work in Paradise
+        </h1>
+
+        <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
+          Premium coworking space steps from the beach. Fast Starlink internet, pool access,
+          and everything you need to be productive in paradise.
+        </p>
+
+        <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+            <Wifi className="w-5 h-5 text-cyan-400" />
+            <span className="text-white font-medium">Starlink Internet</span>
+          </div>
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+            <Coffee className="w-5 h-5 text-cyan-400" />
+            <span className="text-white font-medium">Coffee Bar</span>
+          </div>
+          <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full border border-white/20">
+            <Waves className="w-5 h-5 text-cyan-400" />
+            <span className="text-white font-medium">Pool Access</span>
+          </div>
+        </div>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="#pricing"
+            className="px-8 py-4 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-all transform hover:scale-105 shadow-lg"
+          >
+            View Pricing
+          </a>
+          <a
+            href="#amenities"
+            className="px-8 py-4 bg-white/10 backdrop-blur-md hover:bg-white/20 text-white font-semibold rounded-lg transition-all border border-white/30"
+          >
+            Explore Amenities
+          </a>
+        </div>
+      </div>
+
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white/50 rounded-full flex items-start justify-center p-2">
+          <div className="w-1.5 h-1.5 bg-white/50 rounded-full"></div>
+        </div>
+      </div>
+    </section>
+  );
+}
