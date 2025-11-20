@@ -25,7 +25,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-xl md:text-2xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Premium coworking space steps from the beach. Fast Starlink internet, pool access,
+          Premium coworking space in Boracay steps from the beach. Fast Starlink internet, pool access,
           and everything you need to be productive in paradise.
         </p>
 
