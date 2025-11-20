@@ -51,12 +51,11 @@ const plans = [
   },
   {
     name: 'Foundation Member',
-    price: '4,500',
+    price: '4,750',
     period: 'month',
     description: 'Only 10 available!',
     features: [
-      'Unlimited access forever',
-      'Locked-in lifetime rate',
+      'Discount 12 month rate',
       'Reserved seating',
       'All premium amenities',
       'Priority podcast booth',
@@ -143,7 +142,7 @@ export default function Pricing() {
 
         <div className="mt-12 text-center">
           <p className="text-gray-600 text-lg">
-            💰 Special discounts available for 3, 6, and 12-month commitments
+            💰 Special discounts available for 6 and 12-month commitments
           </p>
         </div>
       </div>

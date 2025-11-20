@@ -9,11 +9,11 @@ const images = [
     title: 'Pool Access'
   },
   {
-    url: '/Willys-Rock-Boracay.webp',
-    title: 'Willy\'s Rock'
+    url: '/laptop-on-beach.JPG',
+    title: 'Beach Workspace'
   },
   {
-    url: '/boracay-Chairs-Portrait.jpeg',
+    url: '/where-is-boracay-located.jpg',
     title: 'Beach Paradise',
     span: 'md:col-span-2'
   },

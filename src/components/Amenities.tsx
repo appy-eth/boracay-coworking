@@ -28,7 +28,7 @@ const amenities = [
   {
     icon: Mic,
     title: 'Podcast Booth',
-    description: 'Professional podcast booth with microphone and lighting setup included.',
+    description: 'Professional podcast booth with microphone and lighting setup available.',
     color: 'from-purple-500 to-pink-500'
   },
   {
