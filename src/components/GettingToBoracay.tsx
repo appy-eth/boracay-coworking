@@ -23,26 +23,26 @@ export default function GettingToBoracay() {
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12">
         <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Quick Navigation</h2>
-          <div className="grid md:grid-cols-2 gap-4">
+          <div className="space-y-3">
             <a href="#manila" className="flex items-center gap-3 p-4 rounded-lg hover:bg-cyan-50 transition-colors group">
               <ArrowRight className="w-5 h-5 text-cyan-600 group-hover:translate-x-1 transition-transform" />
-              <span className="font-medium text-gray-700 group-hover:text-cyan-600">From Manila, Philippines</span>
+              <span className="font-medium text-gray-700 group-hover:text-cyan-600">Getting To Boracay From Manila</span>
             </a>
             <a href="#korea" className="flex items-center gap-3 p-4 rounded-lg hover:bg-cyan-50 transition-colors group">
               <ArrowRight className="w-5 h-5 text-cyan-600 group-hover:translate-x-1 transition-transform" />
-              <span className="font-medium text-gray-700 group-hover:text-cyan-600">From Seoul, Korea</span>
+              <span className="font-medium text-gray-700 group-hover:text-cyan-600">Getting To Boracay From Korea</span>
             </a>
             <a href="#australia" className="flex items-center gap-3 p-4 rounded-lg hover:bg-cyan-50 transition-colors group">
               <ArrowRight className="w-5 h-5 text-cyan-600 group-hover:translate-x-1 transition-transform" />
-              <span className="font-medium text-gray-700 group-hover:text-cyan-600">From Australia</span>
+              <span className="font-medium text-gray-700 group-hover:text-cyan-600">Getting To Boracay From Australia</span>
             </a>
             <a href="#bali" className="flex items-center gap-3 p-4 rounded-lg hover:bg-cyan-50 transition-colors group">
               <ArrowRight className="w-5 h-5 text-cyan-600 group-hover:translate-x-1 transition-transform" />
-              <span className="font-medium text-gray-700 group-hover:text-cyan-600">From Bali, Indonesia</span>
+              <span className="font-medium text-gray-700 group-hover:text-cyan-600">Getting To Boracay From Bali</span>
             </a>
             <a href="#vietnam" className="flex items-center gap-3 p-4 rounded-lg hover:bg-cyan-50 transition-colors group">
               <ArrowRight className="w-5 h-5 text-cyan-600 group-hover:translate-x-1 transition-transform" />
-              <span className="font-medium text-gray-700 group-hover:text-cyan-600">From Vietnam</span>
+              <span className="font-medium text-gray-700 group-hover:text-cyan-600">Getting To Boracay From Vietnam</span>
             </a>
           </div>
         </div>
