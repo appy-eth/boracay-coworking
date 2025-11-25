@@ -1,24 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/Navigation';
-import Hero from './components/Hero';
-import Amenities from './components/Amenities';
-import Gallery from './components/Gallery';
-import Pricing from './components/Pricing';
-import DigitalNomads from './components/DigitalNomads';
-import Contact from './components/Contact';
+import Home from './components/Home';
+import GettingToBoracay from './components/GettingToBoracay';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation />
-      <Hero />
-      <Amenities />
-      <Gallery />
-      <Pricing />
-      <DigitalNomads />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div className="min-h-screen bg-white">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/getting-to-boracay" element={<GettingToBoracay />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
