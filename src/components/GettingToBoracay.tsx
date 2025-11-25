@@ -2,9 +2,9 @@ import { Plane, Ship, MapPin, DollarSign, Clock, ArrowRight } from 'lucide-react
 
 export default function GettingToBoracay() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white pt-20">
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-24">
+      <section className="relative bg-gradient-to-r from-cyan-600 to-blue-700 text-white py-16 md:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-2 mb-4">
             <MapPin className="w-6 h-6" />
@@ -20,7 +20,7 @@ export default function GettingToBoracay() {
       </section>
 
       {/* Table of Contents */}
-      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12">
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">Quick Navigation</h2>
           <div className="space-y-3">
