@@ -1,9 +1,10 @@
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [langOpen, setLangOpen] = useState(false);
   const location = useLocation();
   const isHome = location.pathname === '/';
 
@@ -54,6 +55,39 @@ export default function Navigation() {
             <Link to="/getting-to-boracay" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
               Getting Here
             </Link>
+            
+            {/* Language Dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setLangOpen(!langOpen)}
+                className="flex items-center gap-1 text-gray-700 hover:text-cyan-600 font-medium transition-colors"
+              >
+                EN
+                <ChevronDown className="w-4 h-4" />
+              </button>
+              
+              {langOpen && (
+                <div className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg py-2 border border-gray-100">
+                  <Link
+                    to="/kr"
+                    className="flex items-center gap-3 px-4 py-2 hover:bg-gray-50 transition-colors"
+                    onClick={() => setLangOpen(false)}
+                  >
+                    <span className="text-2xl">🇰🇷</span>
+                    <span className="text-gray-700 font-medium">한국어</span>
+                  </Link>
+                  <Link
+                    to="/cn"
+                    className="flex items-center gap-3 px-4 py-2 hover:bg-gray-50 transition-colors"
+                    onClick={() => setLangOpen(false)}
+                  >
+                    <span className="text-2xl">🇨🇳</span>
+                    <span className="text-gray-700 font-medium">中文（简体）</span>
+                  </Link>
+                </div>
+              )}
+            </div>
+            
             <a href={isHome ? "#booking" : "/#booking"} className="px-6 py-2.5 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors">
               Contact Us
             </a>
