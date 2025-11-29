@@ -34,6 +34,40 @@ export default function Navigation() {
     return `#${section}`;
   };
 
+  const getNavText = (key: string) => {
+    if (isKR) {
+      const krTexts: { [key: string]: string } = {
+        amenities: '편의시설',
+        gallery: '갤러리',
+        pricing: '요금',
+        nomads: '디지털 노마드를 위해',
+        gettingHere: '보라카이 가는 방법',
+        contactUs: '연락하기'
+      };
+      return krTexts[key] || key;
+    }
+    if (isCN) {
+      const cnTexts: { [key: string]: string } = {
+        amenities: '设施',
+        gallery: '图库',
+        pricing: '价格',
+        nomads: '数字游民',
+        gettingHere: '前往长滩岛',
+        contactUs: '联系我们'
+      };
+      return cnTexts[key] || key;
+    }
+    const enTexts: { [key: string]: string } = {
+      amenities: 'Amenities',
+      gallery: 'Gallery',
+      pricing: 'Pricing',
+      nomads: 'For Nomads',
+      gettingHere: 'Getting Here',
+      contactUs: 'Contact Us'
+    };
+    return enTexts[key] || key;
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -50,36 +84,36 @@ export default function Navigation() {
             {(isHome || isKR || isCN) ? (
               <>
                 <a href={getSectionLink('amenities')} className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
-                  Amenities
+                  {getNavText('amenities')}
                 </a>
                 <a href={getSectionLink('gallery')} className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
-                  Gallery
+                  {getNavText('gallery')}
                 </a>
                 <a href={getSectionLink('pricing')} className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
-                  Pricing
+                  {getNavText('pricing')}
                 </a>
                 <a href={getSectionLink('nomads')} className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
-                  For Nomads
+                  {getNavText('nomads')}
                 </a>
               </>
             ) : (
               <>
                 <Link to="/#amenities" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
-                  Amenities
+                  {getNavText('amenities')}
                 </Link>
                 <Link to="/#gallery" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
-                  Gallery
+                  {getNavText('gallery')}
                 </Link>
                 <Link to="/#pricing" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
-                  Pricing
+                  {getNavText('pricing')}
                 </Link>
                 <Link to="/#nomads" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
-                  For Nomads
+                  {getNavText('nomads')}
                 </Link>
               </>
             )}
             <Link to="/getting-to-boracay" className="text-gray-700 hover:text-cyan-600 font-medium transition-colors">
-              Getting Here
+              {getNavText('gettingHere')}
             </Link>
             
             {/* Language Dropdown */}
@@ -123,7 +157,7 @@ export default function Navigation() {
             </div>
             
             <a href={getContactLink()} className="px-6 py-2.5 bg-cyan-500 hover:bg-cyan-600 text-white font-semibold rounded-lg transition-colors">
-              Contact Us
+              {getNavText('contactUs')}
             </a>
           </div>
 
@@ -144,39 +178,39 @@ export default function Navigation() {
             {(isHome || isKR || isCN) ? (
               <>
                 <a href={getSectionLink('amenities')} className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>
-                  Amenities
+                  {getNavText('amenities')}
                 </a>
                 <a href={getSectionLink('gallery')} className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>
-                  Gallery
+                  {getNavText('gallery')}
                 </a>
                 <a href={getSectionLink('pricing')} className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>
-                  Pricing
+                  {getNavText('pricing')}
                 </a>
                 <a href={getSectionLink('nomads')} className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>
-                  For Nomads
+                  {getNavText('nomads')}
                 </a>
               </>
             ) : (
               <>
                 <Link to="/#amenities" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>
-                  Amenities
+                  {getNavText('amenities')}
                 </Link>
                 <Link to="/#gallery" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>
-                  Gallery
+                  {getNavText('gallery')}
                 </Link>
                 <Link to="/#pricing" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>
-                  Pricing
+                  {getNavText('pricing')}
                 </Link>
                 <Link to="/#nomads" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>
-                  For Nomads
+                  {getNavText('nomads')}
                 </Link>
               </>
             )}
             <Link to="/getting-to-boracay" className="block px-3 py-2 text-gray-700 hover:bg-gray-50 rounded-lg" onClick={() => setIsOpen(false)}>
-              Getting Here
+              {getNavText('gettingHere')}
             </Link>
             <a href={getContactLink()} className="block px-3 py-2 bg-cyan-500 text-white text-center rounded-lg" onClick={() => setIsOpen(false)}>
-              Contact Us
+              {getNavText('contactUs')}
             </a>
           </div>
         </div>
